@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Peralatan Subcont - BOX SHM</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 16px; }
+  h1 { text-align: center; font-size: 18px; color: #1e3a5f; margin-bottom: 4px; }
+  .subtitle { text-align: center; font-size: 13px; color: #555; margin-bottom: 16px; }
+
+  .card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .card h2 { font-size: 14px; color: #1e3a5f; border-bottom: 2px solid #1e3a5f; padding-bottom: 6px; margin-bottom: 12px; }
+
+  /* SVG views */
+  svg text { font-family: Arial, sans-serif; }
+
+  /* Material list */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1e3a5f; color: white; padding: 8px 6px; text-align: left; }
+  td { padding: 7px 6px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+
+  /* Legend */
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+
+  .note { font-size: 12px; color: #666; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<h1>📦 BOX PERALATAN SUBCONT</h1>
+<p class="subtitle">BOX 001 — Material: Plate 6mm + Siku 75x75 + Siku 150x150</p>
+
+<!-- TAMPAK ISOMETRIK -->
+<div class="card">
+  <h2>🔷 Tampak 3D (Isometrik)</h2>
+  <svg viewBox="0 0 340 240" width="100%">
+    <!-- Body box - panel depan -->
+    <polygon points="60,80 220,80 220,200 60,200" fill="#dce8f5" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- Panel atas -->
+    <polygon points="60,80 130,40 290,40 220,80" fill="#b8d4ed" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- Panel samping kanan -->
+    <polygon points="220,80 290,40 290,160 220,200" fill="#a0c0e0" stroke="#1e3a5f" stroke-width="2"/>
+
+    <!-- Pintu (depan) -->
+    <rect x="90" y="100" width="80" height="75" rx="6" fill="white" stroke="#1e3a5f" stroke-width="1.5"/>
+    <line x1="90" y1="137" x2="170" y2="137" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="130" y1="100" x2="130" y2="175" stroke="#1e3a5f" stroke-width="1"/>
+    <!-- Handle -->
+    <rect x="118" y="172" width="24" height="5" rx="2" fill="#888"/>
+
+    <!-- Siku 150x150 (pojok bawah) - tebal -->
+    <rect x="47" y="192" width="13" height="13" fill="#e67e22" stroke="#c0392b" stroke-width="1"/>
+    <rect x="220" y="192" width="13" height="13" fill="#e67e22" stroke="#c0392b" stroke-width="1"/>
+    <!-- Siku samping atas -->
+    <rect x="47" y="75" width="13" height="13" fill="#e67e22" stroke="#c0392b" stroke-width="1"/>
+
+    <!-- Siku 75x75 samping -->
+    <rect x="285" y="36" width="8" height="8" fill="#27ae60" stroke="#1e9a50" stroke-width="1"/>
+    <rect x="285" y="154" width="8" height="8" fill="#27ae60" stroke="#1e9a50" stroke-width="1"/>
+    <rect x="215" y="75" width="8" height="8" fill="#27ae60" stroke="#1e9a50" stroke-width="1"/>
+
+    <!-- Dimensi -->
+    <text x="140" y="225" text-anchor="middle" font-size="11" fill="#333">← 1800 mm →</text>
+    <text x="20" y="145" text-anchor="middle" font-size="11" fill="#333" transform="rotate(-90,20,145)">2000 mm</text>
+    <text x="270" y="30" text-anchor="middle" font-size="11" fill="#333">1800 mm</text>
+
+    <!-- Label -->
+    <text x="130" y="140" text-anchor="middle" font-size="13" fill="#1e3a5f" font-weight="bold">DEPAN</text>
+    <text x="255" y="110" text-anchor="middle" font-size="11" fill="#1e3a5f" transform="rotate(15,255,110)">SAMPING</text>
+  </svg>
+
+  <div class="legend">
+    <div class="legend-item"><div class="dot" style="background:#dce8f5;border:1px solid #1e3a5f"></div> Plate 6mm</div>
+    <div class="legend-item"><div class="dot" style="background:#e67e22"></div> Siku 150x150</div>
+    <div class="legend-item"><div class="dot" style="background:#27ae60"></div> Siku 75x75</div>
+  </div>
+</div>
+
+<!-- TAMPAK DEPAN -->
+<div class="card">
+  <h2>⬜ Tampak Depan</h2>
+  <svg viewBox="0 0 300 220" width="100%">
+    <!-- Frame -->
+    <rect x="40" y="20" width="220" height="180" fill="#dce8f5" stroke="#1e3a5f" stroke-width="2.5"/>
+    <!-- Siku pojok (150x150) -->
+    <rect x="40" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="40" y="184" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="184" width="16" height="16" fill="#e67e22"/>
+    <!-- Pintu tengah -->
+    <rect x="80" y="50" width="140" height="120" rx="8" fill="white" stroke="#1e3a5f" stroke-width="1.5"/>
+    <line x1="80" y1="110" x2="220" y2="110" stroke="#aaa" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="150" y1="50" x2="150" y2="170" stroke="#aaa" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="80" y1="50" x2="220" y2="170" stroke="#ccc" stroke-width="1"/>
+    <line x1="220" y1="50" x2="80" y2="170" stroke="#ccc" stroke-width="1"/>
+    <!-- handle -->
+    <rect x="133" y="166" width="34" height="6" rx="3" fill="#888"/>
+
+    <!-- Dimensi -->
+    <text x="150" y="212" text-anchor="middle" font-size="11" fill="#333">← 1800 mm →</text>
+    <line x1="40" y1="210" x2="260" y2="210" stroke="#333" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="18" y="112" text-anchor="middle" font-size="11" fill="#333" transform="rotate(-90,18,112)">2000 mm</text>
+
+    <!-- Label dimensi pintu -->
+    <text x="150" y="45" text-anchor="middle" font-size="10" fill="#555">1000 mm</text>
+    <text x="68" y="112" text-anchor="middle" font-size="10" fill="#555" transform="rotate(-90,68,112)">800 mm</text>
+
+    <!-- Label Siku -->
+    <text x="150" y="15" text-anchor="middle" font-size="10" fill="#e67e22">Siku 150x150 (4 pojok)</text>
+  </svg>
+</div>
+
+<!-- TAMPAK BELAKANG -->
+<div class="card">
+  <h2>⬜ Tampak Belakang</h2>
+  <svg viewBox="0 0 300 200" width="100%">
+    <rect x="40" y="20" width="220" height="160" fill="#dce8f5" stroke="#1e3a5f" stroke-width="2.5"/>
+    <!-- Siku 150 pojok -->
+    <rect x="40" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="40" y="164" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="164" width="16" height="16" fill="#e67e22"/>
+    <!-- Siku 75 tengah vertical -->
+    <rect x="148" y="20" width="8" height="160" fill="#27ae60" opacity="0.5"/>
+    <!-- Siku 75 tengah horizontal -->
+    <rect x="40" y="96" width="220" height="8" fill="#27ae60" opacity="0.5"/>
+
+    <text x="150" y="185" text-anchor="middle" font-size="11" fill="#333">← 1800 mm →</text>
+    <text x="150" y="14" text-anchor="middle" font-size="10" fill="#27ae60">Siku 75x75 (penguat tengah)</text>
+  </svg>
+</div>
+
+<!-- DAFTAR MATERIAL -->
+<div class="card">
+  <h2>📋 Daftar Material (dari GI Slip)</h2>
+  <table>
+    <thead>
+      <tr><th>No</th><th>Material</th><th>Ukuran</th><th>Qty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Sheet Plate M/S A36 NC</td>
+        <td>6x1800x6000 mm</td>
+        <td><strong>2 SHT</strong></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Angle Bar (Siku Besar)</td>
+        <td>150x150x12x6000 mm</td>
+        <td><strong>1 EA</strong></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Angle Bar (Siku Kecil)</td>
+        <td>75x75x6x6000 mm</td>
+        <td><strong>5 EA</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">📌 Acct.Assgt: F 002700047696 | SLoc: MH01 | Issued by: 21050245</p>
+</div>
+
+<!-- KETERANGAN PEMASANGAN -->
+<div class="card">
+  <h2>🔧 Keterangan Pemasangan</h2>
+  <table>
+    <thead><tr><th>Posisi</th><th>Material</th><th>Fungsi</th></tr></thead>
+    <tbody>
+      <tr><td>4 Pojok Utama</td><td>Siku 150x150</td><td>Rangka utama / kaki box</td></tr>
+      <tr><td>Tengah & Samping</td><td>Siku 75x75</td><td>Penguat dinding & partisi</td></tr>
+      <tr><td>Panel Semua Sisi</td><td>Plate 6mm</td><td>Dinding box (las ke siku)</td></tr>
+      <tr><td>Depan</td><td>Plate 6mm</td><td>Pintu (dengan engsel)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+      </html>
+                               <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Peralatan Subcont - BOX 001</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 16px; }
+  h1 { text-align: center; font-size: 18px; color: #1e3a5f; margin-bottom: 4px; }
+  .subtitle { text-align: center; font-size: 13px; color: #555; margin-bottom: 16px; }
+
+  .card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .card h2 { font-size: 14px; color: #1e3a5f; border-bottom: 2px solid #1e3a5f; padding-bottom: 6px; margin-bottom: 12px; }
+
+  /* SVG views */
+  svg text { font-family: Arial, sans-serif; }
+
+  /* Material list */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1e3a5f; color: white; padding: 8px 6px; text-align: left; }
+  td { padding: 7px 6px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+
+  /* Legend */
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+
+  .note { font-size: 12px; color: #666; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<h1>📦 BOX PERALATAN SUBCONT</h1>
+<p class="subtitle">BOX 001 — Material: Plate 6mm + Siku 75x75 + Siku 150x150</p>
+
+<!-- TAMPAK ISOMETRIK -->
+<div class="card">
+  <h2>🔷 Tampak 3D (Isometrik)</h2>
+  <svg viewBox="0 0 340 240" width="100%">
+    <!-- Body box - panel depan -->
+    <polygon points="60,80 220,80 220,200 60,200" fill="#dce8f5" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- Panel atas -->
+    <polygon points="60,80 130,40 290,40 220,80" fill="#b8d4ed" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- Panel samping kanan -->
+    <polygon points="220,80 290,40 290,160 220,200" fill="#a0c0e0" stroke="#1e3a5f" stroke-width="2"/>
+
+    <!-- Pintu (depan) -->
+    <rect x="90" y="100" width="80" height="75" rx="6" fill="white" stroke="#1e3a5f" stroke-width="1.5"/>
+    <line x1="90" y1="137" x2="170" y2="137" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="130" y1="100" x2="130" y2="175" stroke="#1e3a5f" stroke-width="1"/>
+    <!-- Handle -->
+    <rect x="118" y="172" width="24" height="5" rx="2" fill="#888"/>
+
+    <!-- Siku 150x150 (pojok bawah) - tebal -->
+    <rect x="47" y="192" width="13" height="13" fill="#e67e22" stroke="#c0392b" stroke-width="1"/>
+    <rect x="220" y="192" width="13" height="13" fill="#e67e22" stroke="#c0392b" stroke-width="1"/>
+    <!-- Siku samping atas -->
+    <rect x="47" y="75" width="13" height="13" fill="#e67e22" stroke="#c0392b" stroke-width="1"/>
+
+    <!-- Siku 75x75 samping -->
+    <rect x="285" y="36" width="8" height="8" fill="#27ae60" stroke="#1e9a50" stroke-width="1"/>
+    <rect x="285" y="154" width="8" height="8" fill="#27ae60" stroke="#1e9a50" stroke-width="1"/>
+    <rect x="215" y="75" width="8" height="8" fill="#27ae60" stroke="#1e9a50" stroke-width="1"/>
+
+    <!-- Dimensi -->
+    <text x="140" y="225" text-anchor="middle" font-size="11" fill="#333">← 1800 mm →</text>
+    <text x="20" y="145" text-anchor="middle" font-size="11" fill="#333" transform="rotate(-90,20,145)">2000 mm</text>
+    <text x="270" y="30" text-anchor="middle" font-size="11" fill="#333">1800 mm</text>
+
+    <!-- Label -->
+    <text x="130" y="140" text-anchor="middle" font-size="13" fill="#1e3a5f" font-weight="bold">DEPAN</text>
+    <text x="255" y="110" text-anchor="middle" font-size="11" fill="#1e3a5f" transform="rotate(15,255,110)">SAMPING</text>
+  </svg>
+
+  <div class="legend">
+    <div class="legend-item"><div class="dot" style="background:#dce8f5;border:1px solid #1e3a5f"></div> Plate 6mm</div>
+    <div class="legend-item"><div class="dot" style="background:#e67e22"></div> Siku 150x150</div>
+    <div class="legend-item"><div class="dot" style="background:#27ae60"></div> Siku 75x75</div>
+  </div>
+</div>
+
+<!-- TAMPAK DEPAN -->
+<div class="card">
+  <h2>⬜ Tampak Depan</h2>
+  <svg viewBox="0 0 300 220" width="100%">
+    <!-- Frame -->
+    <rect x="40" y="20" width="220" height="180" fill="#dce8f5" stroke="#1e3a5f" stroke-width="2.5"/>
+    <!-- Siku pojok (150x150) -->
+    <rect x="40" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="40" y="184" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="184" width="16" height="16" fill="#e67e22"/>
+    <!-- Pintu tengah -->
+    <rect x="80" y="50" width="140" height="120" rx="8" fill="white" stroke="#1e3a5f" stroke-width="1.5"/>
+    <line x1="80" y1="110" x2="220" y2="110" stroke="#aaa" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="150" y1="50" x2="150" y2="170" stroke="#aaa" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="80" y1="50" x2="220" y2="170" stroke="#ccc" stroke-width="1"/>
+    <line x1="220" y1="50" x2="80" y2="170" stroke="#ccc" stroke-width="1"/>
+    <!-- handle -->
+    <rect x="133" y="166" width="34" height="6" rx="3" fill="#888"/>
+
+    <!-- Dimensi -->
+    <text x="150" y="212" text-anchor="middle" font-size="11" fill="#333">← 1800 mm →</text>
+    <line x1="40" y1="210" x2="260" y2="210" stroke="#333" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+    <text x="18" y="112" text-anchor="middle" font-size="11" fill="#333" transform="rotate(-90,18,112)">2000 mm</text>
+
+    <!-- Label dimensi pintu -->
+    <text x="150" y="45" text-anchor="middle" font-size="10" fill="#555">1000 mm</text>
+    <text x="68" y="112" text-anchor="middle" font-size="10" fill="#555" transform="rotate(-90,68,112)">800 mm</text>
+
+    <!-- Label Siku -->
+    <text x="150" y="15" text-anchor="middle" font-size="10" fill="#e67e22">Siku 150x150 (4 pojok)</text>
+  </svg>
+</div>
+
+<!-- TAMPAK BELAKANG -->
+<div class="card">
+  <h2>⬜ Tampak Belakang</h2>
+  <svg viewBox="0 0 300 200" width="100%">
+    <rect x="40" y="20" width="220" height="160" fill="#dce8f5" stroke="#1e3a5f" stroke-width="2.5"/>
+    <!-- Siku 150 pojok -->
+    <rect x="40" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="20" width="16" height="16" fill="#e67e22"/>
+    <rect x="40" y="164" width="16" height="16" fill="#e67e22"/>
+    <rect x="244" y="164" width="16" height="16" fill="#e67e22"/>
+    <!-- Siku 75 tengah vertical -->
+    <rect x="148" y="20" width="8" height="160" fill="#27ae60" opacity="0.5"/>
+    <!-- Siku 75 tengah horizontal -->
+    <rect x="40" y="96" width="220" height="8" fill="#27ae60" opacity="0.5"/>
+
+    <text x="150" y="185" text-anchor="middle" font-size="11" fill="#333">← 1800 mm →</text>
+    <text x="150" y="14" text-anchor="middle" font-size="10" fill="#27ae60">Siku 75x75 (penguat tengah)</text>
+  </svg>
+</div>
+
+<!-- DAFTAR MATERIAL -->
+<div class="card">
+  <h2>📋 Daftar Material </h2>
+  <table>
+    <thead>
+      <tr><th>No</th><th>Material</th><th>Ukuran</th><th>Qty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Sheet Plate M/S A36 NC</td>
+        <td>6x1800x6000 mm</td>
+        <td><strong>2 SHT</strong></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Angle Bar (Siku Besar)</td>
+        <td>150x150x12x6000 mm</td>
+        <td><strong>1 EA</strong></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Angle Bar (Siku Kecil)</td>
+        <td>75x75x6x6000 mm</td>
+        <td><strong>5 EA</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">📌 Acct.Assgt: F 002700047696 | SLoc: MH01 | Issued by: 21050245</p>
+</div>
+
+<!-- KETERANGAN PEMASANGAN -->
+<div class="card">
+  <h2>🔧 Keterangan Pemasangan</h2>
+  <table>
+    <thead><tr><th>Posisi</th><th>Material</th><th>Fungsi</th></tr></thead>
+    <tbody>
+      <tr><td>4 Pojok Utama</td><td>Siku 150x150</td><td>Rangka utama / kaki box</td></tr>
+      <tr><td>Tengah & Samping</td><td>Siku 75x75</td><td>Penguat dinding & partisi</td></tr>
+      <tr><td>Panel Semua Sisi</td><td>Plate 6mm</td><td>Dinding box (las ke siku)</td></tr>
+      <tr><td>Depan</td><td>Plate 6mm</td><td>Pintu (dengan engsel)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
