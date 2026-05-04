@@ -476,7 +476,7 @@ function renderWeekly() {
 
     rows += `
       <tr style="${isSelected ? 'background:#0e4d7a;' : ''}">
-        <td>${DAYS_ID}</td>
+     <td>${DAYS_ID[cur.getDay()]}</td>
         <td>${cur.toLocaleDateString('id-ID')}</td>
         <td>
           ✅ ${counts.masuk} |
