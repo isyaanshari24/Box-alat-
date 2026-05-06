@@ -1,0 +1,21 @@
+{
+  "name": "Absensi PT. SHM",
+  "short_name": "SHM Absensi",
+  "description": "Sistem Absensi PT. Sumber Hayati Mandiri",
+  "start_url": "/PT.SHM/",
+  "display": "standalone",
+  "background_color": "#0d1b2a",
+  "theme_color": "#0d1b2a",
+  "icons": [
+    {
+      "src": "icon-shm.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-shm.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
