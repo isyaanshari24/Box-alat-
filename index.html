@@ -245,7 +245,20 @@
 </div>
 
 <div class="container">
-
+<!-- SECTION 4: POIN PERORANGAN -->
+  <div class="sec-header">
+    <div class="sec-title">🏆 Poin Perorangan (Minggu Ini)</div>
+    <div class="sec-line"></div>
+    <div class="sec-num">04</div>
+  </div>
+  <div class="card">
+    <div style="margin-bottom:12px; font-size:.78rem; color:var(--text2); font-family:'Share Tech Mono';">
+      📌 Masuk = 1 poin &nbsp;|&nbsp; Lembur = 2 poin &nbsp;|&nbsp; ½ Hari = 0.5 poin &nbsp;|&nbsp; Libur = 0 poin
+    </div>
+    <div class="points-scroll">
+      <div id="pointsTable"><div class="empty-state"><div class="empty-icon">🏅</div>Belum ada data poin minggu ini</div></div>
+    </div>
+  </div>
   <!-- SECTION 1: INPUT ABSENSI -->
   <div class="sec-header">
     <div class="sec-title">📋 Input Absensi</div>
@@ -293,20 +306,6 @@
     <div id="weeklyTable"><div class="empty-state"><div class="empty-icon">📊</div>Belum ada data rekap minggu ini</div></div>
   </div>
 
-  <!-- SECTION 4: POIN PERORANGAN -->
-  <div class="sec-header">
-    <div class="sec-title">🏆 Poin Perorangan (Minggu Ini)</div>
-    <div class="sec-line"></div>
-    <div class="sec-num">04</div>
-  </div>
-  <div class="card">
-    <div style="margin-bottom:12px; font-size:.78rem; color:var(--text2); font-family:'Share Tech Mono';">
-      📌 Masuk = 1 poin &nbsp;|&nbsp; Lembur = 2 poin &nbsp;|&nbsp; ½ Hari = 0.5 poin &nbsp;|&nbsp; Libur = 0 poin
-    </div>
-    <div class="points-scroll">
-      <div id="pointsTable"><div class="empty-state"><div class="empty-icon">🏅</div>Belum ada data poin minggu ini</div></div>
-    </div>
-  </div>
 
   <!-- SECTION 5: FORMAT WA -->
   <div class="sec-header">
@@ -316,7 +315,7 @@
   </div>
   <div class="card">
     <div class="wa-tabs">
-      <button class="wa-tab active" onclick="switchWaTab('list',this)">📋 List Manpower</button>
+      button class="wa-tab active" onclick="switchWaTab('list',this)">📋 List Manpower</button>
       <button class="wa-tab" onclick="switchWaTab('summary',this)">📊 Rekap Masuk</button>
     </div>
     <div class="wa-box" id="waBox">Simpan absensi terlebih dahulu untuk melihat format WA.</div>
