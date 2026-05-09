@@ -250,7 +250,7 @@
   }
   .status-item {
     display: flex; align-items: center; gap: 6px;
-    font-size: 0.72rem; color: var(--soft); font-weight: 700;
+    font-size: 0.83rem; color: var(--soft); font-weight: 700;
   }
   .dot {
     width: 8px; height: 8px; border-radius: 50%;
@@ -327,7 +327,7 @@
   <!-- Message bubble -->
   <div class="bubble">
     <p>
-      Sabar ya <span class="highlight">Isya</span>,<br>
+      Sabar ya,<span class="highlight">Isya</span><br>
       lagi maintenance webnya ☺️🙏🏻
     </p>
   </div>
@@ -355,13 +355,13 @@
   <!-- Status dots -->
   <div class="status-row">
     <div class="status-item"><div class="dot green"></div> Database</div>
-    <div class="status-item"><div class="dot orange"></div> Backend</div>
+    <div class="status-item"><div class="dot green"></div> Backend</div>
     <div class="status-item"><div class="dot red"></div> Frontend</div>
   </div>
 
   <!-- Footer -->
   <div class="footer-note">
-    Akan segera kembali normal •
+    Web akan segera kembali normal •
     <span>Terima kasih atas kesabarannya 🙏</span>
   </div>
 
@@ -402,7 +402,7 @@
   // ── Progress counter ──
   const pctEl = document.getElementById("pct");
   let current = 0;
-  const target = 72;
+  const target = 83;
   setTimeout(() => {
     const iv = setInterval(() => {
       if (current >= target) { clearInterval(iv); return; }
