@@ -38,7 +38,134 @@
                 radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0,180,216,0.10) 0%, transparent 50%);
     pointer-events:none; z-index:0;
   }
-  .page { position:relative; z-index:1; min-height:100vh; }
+  /* ─── OPENING ANIMATION ─── */
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  animation: pageZoomOut 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body::before {
+  animation: bgBlurClear 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  filter: blur(20px);
+  transform: scale(1.18);
+}
+
+#page-landing {
+  opacity: 0;
+  transform: scale(1.1) translateY(30px);
+  animation: landingReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+/* Logo animation */
+.logo-wrap {
+  animation: floatingLogo 4s ease-in-out infinite;
+}
+
+/* Card entrance */
+.landing-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardReveal 1.2s ease forwards;
+}
+
+.landing-card:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.landing-card:nth-child(2) {
+  animation-delay: 0.95s;
+}
+
+/* Title glow */
+.landing-title {
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+/* KEYFRAMES */
+
+@keyframes pageZoomOut {
+  0% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bgBlurClear {
+  0% {
+    filter: blur(20px);
+    transform: scale(1.18);
+    opacity: 0.45;
+  }
+
+  60% {
+    filter: blur(8px);
+  }
+
+  100% {
+    filter: blur(0px);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes landingReveal {
+  0% {
+    opacity: 0;
+    transform: scale(1.1) translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatingLogo {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 0px rgba(0,180,216,0);
+  }
+
+  100% {
+    text-shadow:
+      0 0 12px rgba(0,180,216,0.25),
+      0 0 24px rgba(0,180,216,0.18);
+  }
+}
 
   /* ─── LANDING ─── */
   #page-landing {
